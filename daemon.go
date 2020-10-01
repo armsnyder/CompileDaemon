@@ -166,7 +166,7 @@ func build() bool {
 	if err == nil {
 		log.Println(okColor("Build ok."))
 	} else {
-		log.Println(failColor("Error while building:\n"), failColor(string(output)))
+		log.Println(failColor("Error while building:\n"), failColor(string(output)), failColor(fmt.Sprintf("%v", err)))
 	}
 
 	return err == nil
